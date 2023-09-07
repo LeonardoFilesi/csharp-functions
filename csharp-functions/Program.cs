@@ -2,9 +2,9 @@
 {
     internal class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            //-----------------------------------------SVOLGI LE SEGUENTI FUNZIONI-----------------------------------------------
+            //-----------------------------------------CREA LE SEGUENTI FUNZIONI-----------------------------------------------
 
             // 1): preso un array di numeri interi, stampane il contenutoin questa forma "[elemento1, elemento2, elemento3, ...]"
             void PrintArray1(int[] array1)
@@ -51,17 +51,49 @@
 
             //4): Stabilito un array di numeri interi, restituire la somma totale dei numeri dell'array
 
-            static int[] SumOneElementsArray4(int[] array4)
+             int SumOneElementsArray4(int[] array4)
             {
                 int SumArray4 = 0;
             
                 foreach (int number4 in array4)
                 {
-                    int SumArray += number4;
+                    SumArray4 += number4;
                 }
 
                 return SumArray4;
             }
+
+            //----------------------------------------USA LE FUNZIONI CREATE---------------------------------------------
+
+            int[] definitiveArray = { 2, 6, 7, 5, 3, 9 };
+
+            // ESERCIZIO 1): stampare in console (come se fossero un array "[x, y, z, ...]" i numeri dell'array
+
+            PrintArray1(definitiveArray);
+
+            //ESERCIZIO 2): stampare in console l'array definitivo e un altro array definitivo, ma elevato al quadrato
+
+            int[] definitiveArrayCopy = (int[])definitiveArray.Clone();
+
+            foreach (int definitiveNumberCopy in definitiveArrayCopy)
+            {
+                Squared2(definitiveNumberCopy);
+            }
+
+            PrintArray1(definitiveArrayCopy);
+
+            //ESERCIZIO 2.1): 
+
+            SquaredArray3(definitiveArrayCopy);
+
+            //ESERCIZIO 3): stampare la somma di tutti i numeri
+
+            SumOneElementsArray4(definitiveArray);
+
+            //ESERCIZIO 4):stanoare la somma di tutti i numeri elevati al quadrato
+
+            SumOneElementsArray4(definitiveArrayCopy);
+
         }
     }
 }
