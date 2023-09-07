@@ -46,12 +46,13 @@
                 {
                     array3Copy[i] = array3[i] * array3[i];
                 }
+                Console.WriteLine(array3Copy);
                 return array3Copy;
             }
 
             //4): Stabilito un array di numeri interi, restituire la somma totale dei numeri dell'array
 
-             int SumOneElementsArray4(int[] array4)
+             int SumElementsArray4(int[] array4)
             {
                 int SumArray4 = 0;
             
@@ -59,7 +60,7 @@
                 {
                     SumArray4 += number4;
                 }
-
+                Console.WriteLine(SumArray4);
                 return SumArray4;
             }
 
@@ -88,11 +89,11 @@
 
             //ESERCIZIO 3): stampare la somma di tutti i numeri
 
-            SumOneElementsArray4(definitiveArray);
+            SumElementsArray4(definitiveArray);
 
-            //ESERCIZIO 4):stanoare la somma di tutti i numeri elevati al quadrato
+            //ESERCIZIO 4):stampare la somma di tutti i numeri elevati al quadrato
 
-            SumOneElementsArray4(definitiveArrayCopy);
+            SumElementsArray4(definitiveArrayCopy);
 
         }
     }
